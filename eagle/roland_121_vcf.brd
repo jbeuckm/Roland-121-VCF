@@ -1933,7 +1933,7 @@ design rules under a new name.</description>
 </autorouter>
 <elements>
 <element name="12DB_OUT" library="solpad" package="LSP10" value="LSP10" x="60.96" y="27.94" smashed="yes">
-<attribute name="NAME" x="60.96" y="26.67" size="1.27" layer="25" ratio="10" rot="R270"/>
+<attribute name="NAME" x="59.69" y="26.67" size="1.27" layer="25" ratio="10" rot="R270"/>
 <attribute name="VALUE" x="60.96" y="28.194" size="0.0254" layer="27"/>
 </element>
 <element name="24DB_OUT" library="solpad" package="LSP10" value="LSP10" x="95.25" y="19.05" smashed="yes">
@@ -2238,8 +2238,8 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="2.667" y="43.815" size="1.27" layer="27" ratio="10" rot="R270"/>
 </element>
 <element name="WIDTH" library="pot" package="B64W" value="10k" x="27.94" y="26.67" smashed="yes" rot="R180">
-<attribute name="NAME" x="37.465" y="30.2768" size="1.27" layer="25" ratio="10" rot="R180"/>
-<attribute name="VALUE" x="31.877" y="28.575" size="1.27" layer="27" ratio="10" rot="R270"/>
+<attribute name="NAME" x="31.9532" y="31.115" size="1.27" layer="25" ratio="10" rot="R270"/>
+<attribute name="VALUE" x="22.987" y="29.845" size="1.27" layer="27" ratio="10" rot="R270"/>
 </element>
 </elements>
 <signals>
