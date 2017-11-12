@@ -21,12 +21,12 @@ module EuroPanel(label, hp=8) {
     translate([panelWidth - 7.5, 128.5 - 3]) MountingHole();
 
     translate ([sideOffset, 117, 0]) union() {
-        translate([0,-87.750,0]) MIDIHole();
-        translate([0,-71.39,0]) LEDHole();
-        translate([0,-59.97,0]) JackHole();
-        translate([0,-44.7,0]) JackHole();
-        translate([0,-29.43,0]) JackHole();
-        translate([0,-14.17,0]) JackHole();
+        translate([0,-92.71,0]) KnobHole();
+        translate([0,-76.2,0]) KnobHole();
+        translate([0,-58.42,0]) KnobHole();
+        translate([0,-41.91,0]) KnobHole();
+        translate([0,-24.13,0]) KnobHole();
+        translate([0,-7.62,0]) KnobHole();
     }
     translate([18,10,1]) {
       translate([0,90])   {
