@@ -1,26 +1,27 @@
-translate([0,0,2]) rotate([180]) EuroPanel("121", 7);
+translate([0,0,2]) rotate([180]) EuroPanel("121", 9);
 
-module EuroPanel(label, hp=8) {
-    
   font = ".SF Compact Display:style=Bold";
-  labelFontSize = 5.8;
+  labelFontSize = 6.2;
 
-  sideOffset = 5;
+module EuroPanel(label, hp) {
+
+  sideOffset = 8;
   panelWidth = hp*5.08;
 
   translate([panelWidth,0,0]) scale([-1,1,1]) Support();
+  Support();
   
   
   difference() {
     cube([hp*5.08, 128.5, 2]);
       
-    translate([1,118,1])  {
-        linear_extrude(height=2, convexity=4) text(label, size=8, font=font);
+    translate([3,118,1])  {
+        linear_extrude(height=2, convexity=4) text(label, size=9, font=font);
     }
     translate([7.5,3]) MountingHole();
     translate([panelWidth - 7.5, 128.5 - 3]) MountingHole();
 
-    translate ([sideOffset, 117, 0]) union() {
+    translate ([sideOffset, 115, 0]) union() {
         translate([0,-92.71,0]) KnobHole();
         translate([0,-76.2,0]) KnobHole();
         translate([0,-58.42,0]) KnobHole();
@@ -28,20 +29,27 @@ module EuroPanel(label, hp=8) {
         translate([0,-24.13,0]) KnobHole();
         translate([0,-7.62,0]) KnobHole();
     }
-    translate([18,10,1]) {
-      translate([0,90])   {
-          linear_extrude(height=2, convexity=4) text("gate", size=labelFontSize, font=font);
-      }
-      translate([0,75])   {
-          linear_extrude(height=2, convexity=4) text("pch", size=labelFontSize, font=font);
-      }
-      translate([0,60])   {
-          linear_extrude(height=2, convexity=4) text("tone", size=labelFontSize, font=font);
-      }
-      translate([0,45])   {
-          linear_extrude(height=2, convexity=4) text("velo", size=labelFontSize, font=font);
-      }
-  }
+    translate([10,112.5,1]) {
+        label("in",-7.62);
+        label("in",-24.13);
+        label("cv",-41.91);
+        label("cv",-58.42);
+        label("Q",-76.2);
+        label("F",-92.71);
+    }
+
+    translate ([sideOffset+20, 115, 0]) union() {
+        translate([0,-92.71,0]) JackHole();
+        translate([0,-76.2,0]) JackHole();
+        translate([0,-58.42,0]) JackHole();
+        translate([0,-41.91,0]) JackHole();
+        translate([0,-24.13,0]) JackHole();
+        translate([0,-7.62,0]) JackHole();
+    }
+    translate([44,104,1]) {
+        label("12",-76.2);
+        label("24",-92.71);
+    }
 
   }
 /*
@@ -49,6 +57,12 @@ module EuroPanel(label, hp=8) {
         translate([panelWidth - sideOffset, 14.25,2])
             cube([1,100,50]);
             */
+}
+
+module label(text, y){
+      translate([0,y])   {
+          linear_extrude(height=2, convexity=4) text(text, size=labelFontSize, font=font, halign="right");
+      }
 }
 
 module KnobHole() { translate([12.5,0,-.5]) cylinder(h=3, d=8, $fn=12); }
