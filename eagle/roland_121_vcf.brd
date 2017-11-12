@@ -2186,7 +2186,7 @@ design rules under a new name.</description>
 <element name="R51" library="rcl" package="0207/7" value="22k" x="83.82" y="22.86" smashed="yes" rot="R270">
 <attribute name="VALUE" x="83.2612" y="25.146" size="1.27" layer="27" ratio="10" rot="R270"/>
 </element>
-<element name="R52" library="rcl" package="0207/7" value="68k" x="82.55" y="45.72" smashed="yes" rot="R90">
+<element name="R52" library="rcl" package="0207/7" value="33k" x="82.55" y="45.72" smashed="yes" rot="R90">
 <attribute name="VALUE" x="83.1088" y="43.434" size="1.27" layer="27" ratio="10" rot="R90"/>
 </element>
 <element name="R53" library="rcl" package="0207/7" value="560" x="80.01" y="45.72" smashed="yes" rot="R270">

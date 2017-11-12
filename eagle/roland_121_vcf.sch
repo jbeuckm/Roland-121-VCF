@@ -15500,7 +15500,7 @@ Digikey #P9821BK-ND</description>
 <part name="GND30" library="supply1" deviceset="GND" device=""/>
 <part name="R31" library="rcl" deviceset="R-US_" device="0207/7" value="68k"/>
 <part name="R39" library="rcl" deviceset="R-US_" device="0207/7" value="68k"/>
-<part name="R52" library="rcl" deviceset="R-US_" device="0207/7" value="68k"/>
+<part name="R52" library="rcl" deviceset="R-US_" device="0207/7" value="33k"/>
 <part name="C11" library="rcl" deviceset="CPOL-US" device="B45181A" value="10/25v BP"/>
 <part name="Q5" library="transistor-npn" deviceset="2N3904" device=""/>
 <part name="R47" library="rcl" deviceset="R-US_" device="0207/7" value="4k7"/>
