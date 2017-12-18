@@ -1,7 +1,7 @@
 translate([0,0,2]) rotate([180]) EuroPanel("121", 9);
 
   font = ".SF Compact Display:style=Bold";
-  labelFontSize = 6.2;
+  labelFontSize = 7;
 
 module EuroPanel(label, hp) {
 
@@ -13,9 +13,9 @@ module EuroPanel(label, hp) {
   
   
   difference() {
-    cube([hp*5.08, 128.5, 2]);
+    cube([hp*5.08, 128.5, 3]);
       
-    translate([3,118,1])  {
+    translate([3,118,2])  {
         linear_extrude(height=2, convexity=4) text(label, size=9, font=font);
     }
     translate([7.5,3]) MountingHole();
@@ -29,7 +29,7 @@ module EuroPanel(label, hp) {
         translate([0,-24.13,0]) KnobHole();
         translate([0,-7.62,0]) KnobHole();
     }
-    translate([10,112.5,1]) {
+    translate([12,112.5,2]) {
         label("in",-7.62);
         label("in",-24.13);
         label("cv",-41.91);
@@ -46,7 +46,7 @@ module EuroPanel(label, hp) {
         translate([0,-24.13,0]) JackHole();
         translate([0,-7.62,0]) JackHole();
     }
-    translate([44,104,1]) {
+    translate([44,103,2]) {
         label("12",-76.2);
         label("24",-92.71);
     }
@@ -65,13 +65,13 @@ module label(text, y){
       }
 }
 
-module KnobHole() { translate([12.5,0,-.5]) cylinder(h=3, d=8, $fn=12); }
+module KnobHole() { translate([12.5,0,-.5]) cylinder(h=4, d=8, $fn=12); }
 
-module JackHole() { translate([6,0,-.5]) cylinder(h=3, d=6.5, $fn=12); }
+module JackHole() { translate([6,0,-.5]) cylinder(h=4, d=6.5, $fn=12); }
 
-module LEDHole() { translate([10,0,-.5]) cylinder(h=3, d=5.3, $fn=12); }
+module LEDHole() { translate([10,0,-.5]) cylinder(h=4, d=5.3, $fn=12); }
 
-module MIDIHole() { translate([10.5,0,-.5]) cylinder(h=3, d=18.5, $fn=24); }
+module MIDIHole() { translate([10.5,0,-.5]) cylinder(h=4, d=18.5, $fn=24); }
 
 module Support() {
     translate([0,10,0])
@@ -83,8 +83,8 @@ module Support() {
 
 module MountingHole() {
   hull() {
-    translate([-2,0,-.5]) cylinder(h=3, r=1.6, $fn=12);
-    translate([2,0,-.5]) cylinder(h=3, r=1.6, $fn=12);
+    translate([-2,0,-.5]) cylinder(h=4, r=1.6, $fn=12);
+    translate([2,0,-.5]) cylinder(h=4, r=1.6, $fn=12);
   }
 }
 
